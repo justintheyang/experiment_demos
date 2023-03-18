@@ -1,0 +1,61 @@
+#game {
+  /* border: 5px solid black; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-color: #e6ecf2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blinkRed {
+  from {
+    border-color: rgba(255, 0, 0, 0);
+  }
+  30% {
+    border-color: rgba(255, 0, 0, 0.8);
+  }
+  50% {
+    border-color: rgba(255, 0, 0, 0.2);
+  }
+  70% {
+    border-color: rgba(255, 0, 0, 0.8);
+  }
+  to {
+    border-color: rgba(255, 0, 0, 0);
+  }
+}
+@keyframes blinkGreen {
+  from {
+    border-color: rgba(0, 255, 0, 0);
+  }
+  30% {
+    border-color: rgba(0, 255, 0, 0.8);
+  }
+  50% {
+    border-color: rgba(0, 255, 0, 0.2);
+  }
+  70% {
+    border-color: rgba(0, 255, 0, 0.8);
+  }
+  to {
+    border-color: rgba(0, 255, 0, 0);
+  }
+}

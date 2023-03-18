@@ -1,0 +1,37 @@
+# by default, ignore possibly large files
+.DS_Store
+*.csv
+*.json
+*.pdf
+*.png
+*.jpeg
+*.jpg
+*.tiff
+*.svg
+*.eps
+*.ai
+auth.json
+auth.txt
+prolificToken.txt
+node_modules/
+package-lock.json
+**/example.js
+results/plots/configs*
+heroku_config_vis/
+
+*/__pycache__/*
+
+# ignore Jupyter Notebook junk
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# personal configs
+/sandbox
+desktop.ini
+.prettierrc
+.clj-kondo/
+.lsp/

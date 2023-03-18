@@ -1,0 +1,109 @@
+<!-- Adapted from https://www.geeksforgeeks.org/build-a-survey-form-using-html-and-css/ -->
+<html>
+    <script type="text/javascript" src="js/socket.io.js"></script> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/game_settings.js"></script> 
+    <link rel="stylesheet" href="survey.css"></link>
+    <title>Environment Task | Exit Survey</title>
+    <head>
+    <script>
+        socket = io.connect();
+        $(document).ready( function() {
+            $("button").click( function(e) {
+                e.preventDefault();
+                var formdata = $("#form").serializeArray();
+                var data = {};
+                $(formdata ).each(function(index, obj){
+                    data[obj.name] = obj.value;
+                });
+                var user_data = JSON.parse(sessionStorage.getItem('_user'));
+                sessionStorage.removeItem('_user');
+                sessionStorage.clear();
+                
+                console.log({...user_data, ...data})
+                socket.emit('submitSurvey', {...user_data, ...data});
+                window.open(gs.prolific_completion_URL,"_self")
+            })
+
+        })
+        function exitSurvey(e){
+            e.preventDefault();
+            var formdata = $("#form").serializeArray();
+            var data = {};
+            $(formdata ).each(function(index, obj){
+                data[obj.name] = obj.value;
+            });
+            var user_data = JSON.parse(sessionStorage.getItem('_user'));
+            sessionStorage.removeItem('_user');
+            sessionStorage.clear();
+            
+            console.log({...user_data, ...data})
+            socket.emit('submitSurvey', {...user_data, ...data});
+            window.open("https://google.com","_self")
+        }
+    </script>
+    </head>
+    <body> 
+        <div id='title'><h1 id='titleText'>Exit Survey</h1></div>
+    <!-- <h1> -->
+        <!-- Create Form -->
+        <form id="form">
+    
+            <!-- Participant sex -->
+            <div class="form-control">
+                <label for="participantSex" id="label-name">What is your sex?</label>
+                <label><input required type="radio" name="participantSex" id="participantSex" value="Female"/>Female</label>
+                <label><input type="radio" name="participantSex" id="participantSex" value="Male"/>Male</label>
+                <label><input type="radio" name="participantSex" id="participantSex" value="Neither/Other/Do Not Wish To Say"/>Neither/Other/Do Not Wish To Say</label>
+            </div>
+
+            <!-- Participant age -->
+            <div class="form-control">
+                <label for="participantAge">What is your year of birth?</label>
+                <input type="text" id="participantAge" name="participantAge" placeholder="e.g. 1948"/>
+            </div>
+
+            <!-- Subjective organization -->
+            <div class="form-control">
+                <label for="subjectiveOrganization" id="label-name">How organized do you consider yourself to be? (1: highly unorganized; 5: highly organized)</label>
+                <select name="subjectiveOrganization" id="subjectiveOrganization">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <!-- Participant strategy: numbers -->
+            <div class="form-control">
+                <label for="computedCost">When playing the game, did you use numbers to calculate any costs (in your head or on paper)?</label>                
+                <label><input type="radio" name="computedCost" id="computedCost" value="Yes">Yes</label>
+                <label><input type="radio" name="computedCost" id="computedCost" value="No">No</label>
+            </div>
+
+            <!-- Participant strategy: free response  -->
+            <div class="form-control">
+                <label for="participantStrategy">What strategies did you use when playing this game?</label>
+                <textarea name="participantStrategy" id="participantStrategy" placeholder="Enter your comment here"></textarea>
+            </div>
+
+            <!-- Technical difficulties -->
+            <div class="form-control">
+                <label for="technicalDifficulties">If you encountered any technical difficulties/bugs, please describe the issue here.</label>
+                <textarea name="technicalDifficulties" id="technicalDifficulties" placeholder="I did not encounter any technical difficulities."></textarea>
+            </div>
+    
+            <!-- Participant comments -->
+            <div class="form-control">
+                <label for="participantComments">Thank you for participating in our study! Do you have any other comments or feedback to share with us about your experience?</label>
+                <textarea name="participantComments" id="participantComments" placeholder="I had a lot of fun!"></textarea>
+            </div>
+
+            <button id="submit-button" type="submit" value="submit">
+                End study
+            </button>
+        </form>
+    </body>
+</html>
+    
