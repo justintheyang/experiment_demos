@@ -3,9 +3,6 @@
 *.csv
 *.json
 *.pdf
-*.png
-*.jpeg
-*.jpg
 *.tiff
 *.svg
 *.eps

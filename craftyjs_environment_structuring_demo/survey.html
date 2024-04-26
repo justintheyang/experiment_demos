@@ -7,7 +7,7 @@
     <title>Environment Task | Exit Survey</title>
     <head>
     <script>
-        socket = io.connect();
+        
         $(document).ready( function() {
             $("button").click( function(e) {
                 e.preventDefault();
@@ -22,7 +22,7 @@
                 
                 console.log({...user_data, ...data})
                 socket.emit('submitSurvey', {...user_data, ...data});
-                window.open(gs.prolific_completion_URL,"_self")
+                window.open("https://justintheyang.github.io/","_self")
             })
 
         })
@@ -39,7 +39,7 @@
             
             console.log({...user_data, ...data})
             socket.emit('submitSurvey', {...user_data, ...data});
-            window.open("https://google.com","_self")
+            window.open("https://justintheyang.github.io/","_self")
         }
     </script>
     </head>

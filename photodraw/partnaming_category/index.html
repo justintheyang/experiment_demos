@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Name those parts!</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jspsych.js"></script>
+    <script src="js/jspsych-instructions.js"></script>
+    <script src="js/lodash.js"></script>   
+    <script src="js/setup.js"></script>
+    <script src="js/jspsych-survey-multi-choice.js"></script>
+    <script src="js/jspsych-survey-text.js"></script>
+    <script src="js/jspsych-part-listing.js"></script>
+    <link rel="stylesheet" href="./jspsych.css"></link>
+
+    <script>
+      window.onbeforeunload = function() {
+        return "Please do not refresh the page or go back, changes you made may not be saved!";
+      }
+      window.onload = function() {
+        setupGame();
+      }
+    </script>
+  </head>
+  <body>
+    <div id="display-area">
+    </div>
+  </body>
+</html>
