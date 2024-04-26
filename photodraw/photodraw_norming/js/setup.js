@@ -222,15 +222,6 @@ function setupGame() {
     button_label_next: '< submit',    
     on_finish: () => { 
       boilerplate = _.omit(_.extend({}, new Experiment, additionalInfo), ['type', 'on_finish'])
-      socket.emit('currentData', _.extend({}, boilerplate,
-      {  
-        eventType: 'trial-catches',
-        failed_catches: (num_failed >= 4 ? true : false),
-        num_failed: num_failed,
-        lazy_responder: lazyResponder,
-        repeat_offender: repeat_offender,
-        batch_num: batch_num
-      }))
 
       window.open("https://justintheyang.github.io/","_self")
     }

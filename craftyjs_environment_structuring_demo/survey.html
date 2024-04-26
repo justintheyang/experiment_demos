@@ -1,6 +1,5 @@
 <!-- Adapted from https://www.geeksforgeeks.org/build-a-survey-form-using-html-and-css/ -->
 <html>
-    <script type="text/javascript" src="js/socket.io.js"></script> 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/game_settings.js"></script> 
     <link rel="stylesheet" href="survey.css"></link>
@@ -21,7 +20,6 @@
                 sessionStorage.clear();
                 
                 console.log({...user_data, ...data})
-                socket.emit('submitSurvey', {...user_data, ...data});
                 window.open("https://justintheyang.github.io/","_self")
             })
 
@@ -38,7 +36,6 @@
             sessionStorage.clear();
             
             console.log({...user_data, ...data})
-            socket.emit('submitSurvey', {...user_data, ...data});
             window.open("https://justintheyang.github.io/","_self")
         }
     </script>

@@ -278,7 +278,7 @@ jsPsych.plugins['jspsych-stroke-kid-annotations'] = (function() {
               });
             // send data to server
             console.log('currentData',strokeData);
-            socket.emit('currentData',strokeData);
+            
             })
           $("#special_labels").before($button); 
         });
@@ -362,7 +362,7 @@ jsPsych.plugins['jspsych-stroke-kid-annotations'] = (function() {
       });
       // send data to server
       console.log('currentData',strokeData);
-      socket.emit('currentData',strokeData);
+      
     });
 
     $("#other").click(function(){
@@ -407,7 +407,7 @@ jsPsych.plugins['jspsych-stroke-kid-annotations'] = (function() {
 
         // send data to server
         console.log('currentData',strokeData);
-        socket.emit('currentData',strokeData);
+        
 
         // move onto nextStroke
         nextStroke()
@@ -444,7 +444,7 @@ jsPsych.plugins['jspsych-stroke-kid-annotations'] = (function() {
       });
       // send data to server
       console.log('currentData',strokeData);
-      socket.emit('currentData',strokeData);
+      
       nextStroke()
     } 
     // otherwise set first stroke to green
@@ -480,7 +480,7 @@ jsPsych.plugins['jspsych-stroke-kid-annotations'] = (function() {
         // only send final selection of clicked array (so that user can unclick buttons
         // if they change their mind as they annotate symbols)
         console.log('currentData',strokeData);
-        socket.emit('currentData',strokeData);
+        
 
         // reset clicked list
         clicked = [];
@@ -540,7 +540,7 @@ jsPsych.plugins['jspsych-stroke-kid-annotations'] = (function() {
             // trial.trialNum++;
             // send data to server
             console.log('currentData',strokeData);
-            socket.emit('currentData',strokeData);
+            
             nextStroke();
           } //close else if statement
         } // close previous else statements
