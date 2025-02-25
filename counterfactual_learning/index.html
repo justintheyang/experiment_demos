@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counterfactual Learning Experiments</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #e6d5c3, #d8c1b7);
+            color: #3e3e3e;
+        }
+
+        .container {
+            width: 45%;
+            text-align: center;
+            background: #f9f4ef;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            border: 1px solid #e0cfc1;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            margin-bottom: 12px;
+            font-size: 30px;
+            color: #6e4b3a;
+            font-weight: 700;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #8a6452;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .authors {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #5e4236;
+        }
+
+        .button {
+            display: block;
+            margin: 14px auto;
+            padding: 12px;
+            width: 65%;
+            text-decoration: none;
+            background: #b29987;
+            color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background: #97796b;
+            transform: translateY(-3px);
+        }
+
+        .paper-link {
+            margin-top: 30px;
+            font-size: 15px;
+        }
+
+        .paper-link .button {
+            background: #9e8f99;
+        }
+
+        .paper-link .button:hover {
+            background: #7c6e78;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .button {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Experiments for</h1>
+        <h2><i>Learning to Plan from Observed and Counterfactual Experiences</i></h2>
+        <div class="authors">
+            Justin Yang, Tobias Gerstenberg
+        </div>
+        <a class="button" href="s1_quicksand/index.html">Study 1 Demo</a>
+        <a class="button" href="s2_quicksand/index.html">Study 2 Demo</a>
+        <div class="paper-link">
+            <a class="button" href="https://justintheyang.github.io/docs/papers/counterfactual_learning_cogsci2025.pdf">View the Paper</a>
+            <a class="button" href="https://github.com/cicl-stanford/counterfactual_learning_cogsci2025">See the Repo</a>
+        </div>
+    </div>
+</body>
+</html>
