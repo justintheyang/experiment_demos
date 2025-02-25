@@ -2,8 +2,10 @@ let jsPsych = null;
 
 export async function getJsPsych() {
   if (!jsPsych) {
-    const condition = await jsPsychPipe.getCondition(gs.study_metadata.datapipe_experiment_id);
     gs.study_metadata.condition = (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let condition = parseInt(urlParams.get('condition'));
+
       if (condition === 0) return "observation";
       if (condition === 1) return "counterfactual";
       if (condition === 2) return "hypothetical";
