@@ -4,32 +4,25 @@
   <meta charset="utf-8" />
   <title>jsPsych-colorsort demo</title>
 
-  <!-- <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script> -->
   <script src="https://unpkg.com/jspsych@7.3.3/dist/index.browser.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css"/>
-  
   <script src="https://unpkg.com/plugin-colorsort"></script>
+  <link rel="stylesheet" href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css"/>  
 </head>
 
 <body>
   <div id="jspsych-target"></div>
 
   <script>
-    // initialize jsPsych
     const jsPsych = initJsPsych({
       display_element: 'jspsych-target'
     });
 
-    // list your trial JSON files here
     const trialFiles = [
       'trials/trial1.json',
       'trials/trial2.json',
       'trials/trial3.json',
-      // 'trials/trial4.json',
     ];
 
-    // load every JSON, then map to plugin-defined trials
     Promise.all(trialFiles.map(path =>
       fetch(path).then(res => res.json())
     )).then(configs => {
@@ -40,7 +33,6 @@
         reset_enabled: cfg.reset_enabled
       }));
 
-      // run all trials in sequence
       jsPsych.run(trials);
     });
   </script>
