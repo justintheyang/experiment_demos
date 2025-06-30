@@ -1,0 +1,56 @@
+{
+  "initial_tubes": [
+    {
+      "segments": [
+        { "color": "#EA0031", "hidden": false },
+        { "color": "#3498db", "hidden": false },
+        { "color": "#99CA00", "hidden": false },
+        { "color": "#FECB01", "hidden": false }
+      ]
+    },
+    {
+      "segments": [
+        { "color": "#99CA00", "hidden": false },
+        { "color": "#EA0031", "hidden": false },
+        { "color": "#EA0031", "hidden": false },
+        { "color": "#3498db", "hidden": false }
+      ]
+    },
+    {
+      "segments": [
+        { "color": "#FECB01", "hidden": false },
+        { "color": "#99CA00", "hidden": false },
+        { "color": "#3498db", "hidden": false },
+        { "color": "#FECB01", "hidden": false }
+      ]
+    },
+    {
+      "segments": [
+        { "color": "#3498db", "hidden": false },
+        { "color": "#FECB01", "hidden": false },
+        { "color": "#EA0031", "hidden": false },
+        { "color": "#99CA00", "hidden": false }
+      ]
+    },
+    {
+      "segments": [
+        { "color": "#5C2A87", "hidden": false },
+        { "color": "#FF7A01", "hidden": false },
+        { "color": "#5C2A87", "hidden": false },
+        { "color": "#FF7A01", "hidden": false }
+      ]
+    },
+    {
+      "segments": [
+        { "color": "#FF7A01", "hidden": false },
+        { "color": "#5C2A87", "hidden": false },
+        { "color": "#5C2A87", "hidden": false },
+        { "color": "#FF7A01", "hidden": false }
+      ]
+    },
+    { "segments": [ null, null, null, null ] },
+    { "segments": [ null, null, null, null ] }
+  ],
+  "undo_enabled": false,
+  "reset_enabled": false
+}

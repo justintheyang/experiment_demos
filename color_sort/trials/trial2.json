@@ -1,0 +1,92 @@
+{
+  "initial_tubes": [
+    { "segments": [
+      { "color": "#EA0031", "hidden": false },
+      { "color": "#107CCA", "hidden": false },
+      { "color": "#026640", "hidden": false  },
+      { "color": "#5C2A87", "hidden": false  }
+    ]
+  },
+  { "segments": [
+      { "color": "#5C2A87", "hidden": false },
+      { "color": "#026640", "hidden": false  },
+      { "color": "#B54C2F", "hidden": false  },
+      { "color": "#D3A37A", "hidden": false  }
+    ]
+  },
+  { "segments": [
+      { "color": "#026640", "hidden": false },
+      { "color": "#B54C2F", "hidden": false  },
+      { "color": "#B54C2F", "hidden": false },
+      { "color": "#99CA00", "hidden": false  }
+    ]
+  },
+  { "segments": [
+      { "color": "#EA0031", "hidden": false },
+      { "color": "#FF7A01", "hidden": false  },
+      { "color": "#FECB01", "hidden": false },
+      { "color": "#99CA00", "hidden": false  }
+    ]
+  },
+  { "segments": [
+    { "color": "#99CA00", "hidden": false },
+    { "color": "#5C2A87", "hidden": false },
+    { "color": "#2EE7D7", "hidden": false  },
+    { "color": "#2EE7D7", "hidden": false  }
+  ]
+},
+{ "segments": [
+    { "color": "#FF7A01", "hidden": false },
+    { "color": "#EA0031", "hidden": false  },
+    { "color": "#2EE7D7", "hidden": false  },
+    { "color": "#2EE7D7", "hidden": false  }
+  ]
+},
+{ "segments": [
+    { "color": "#FF7A01", "hidden": false },
+    { "color": "#FF7A01", "hidden": false  },
+    { "color": "#F838DE", "hidden": false },
+    { "color": "#F838DE", "hidden": false  }
+  ]
+},
+{ "segments": [
+    { "color": "#D3A37A", "hidden": false },
+    { "color": "#99CA00", "hidden": false  },
+    { "color": "#5C2A87", "hidden": false },
+    { "color": "#107CCA", "hidden": false  }
+  ]
+},
+{ "segments": [
+  { "color": "#FECB01", "hidden": false },
+  { "color": "#F838DE", "hidden": false },
+  { "color": "#D3A37A", "hidden": false  },
+  { "color": "#107CCA", "hidden": false  }
+]
+},
+{ "segments": [
+  { "color": "#FECB01", "hidden": false },
+  { "color": "#F838DE", "hidden": false  },
+  { "color": "#D3A37A", "hidden": false  },
+  { "color": "#107CCA", "hidden": false  }
+]
+},
+{ "segments": [
+  { "color": "#B54C2F", "hidden": false },
+  { "color": "#026640", "hidden": false  },
+  { "color": "#09A900", "hidden": false },
+  { "color": "#EA0031", "hidden": false  }
+]
+},
+{ "segments": [
+  { "color": "#09A900", "hidden": false },
+  { "color": "#09A900", "hidden": false  },
+  { "color": "#09A900", "hidden": false },
+  { "color": "#FECB01", "hidden": false  }
+]
+},
+{ "segments": [ null, null, null, null ] },
+    { "segments": [ null, null, null, null ] }
+  ],
+  "undo_enabled": true,
+  "reset_enabled": true
+}
