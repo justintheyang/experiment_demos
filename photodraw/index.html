@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoDraw Experiments</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 16px;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #e6d5c3, #d8c1b7);
+            color: #3e3e3e;
+        }
+
+        .container {
+            width: 45%;
+            max-width: 560px;
+            text-align: center;
+            background: #f9f4ef;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            border: 1px solid #e0cfc1;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            margin-bottom: 12px;
+            font-size: 30px;
+            color: #6e4b3a;
+            font-weight: 700;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #8a6452;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .authors {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #5e4236;
+        }
+
+        .group-label {
+            margin: 22px 0 8px;
+            font-size: 13px;
+            color: #6e4b3a;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+        }
+
+        .button {
+            display: block;
+            margin: 10px auto;
+            padding: 12px;
+            width: 75%;
+            text-decoration: none;
+            background: #b29987;
+            color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background: #97796b;
+            transform: translateY(-3px);
+        }
+
+        .paper-link {
+            margin-top: 30px;
+            font-size: 15px;
+        }
+
+        .paper-link .button {
+            background: #9e8f99;
+        }
+
+        .paper-link .button:hover {
+            background: #7c6e78;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .button {
+                width: 85%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Experiments for</h1>
+        <h2><i>Visual Communication of Object Concepts at Different Levels of Abstraction</i></h2>
+        <div class="authors">
+            Justin Yang, Judith E. Fan
+        </div>
+
+        <div class="group-label">Drawing</div>
+        <a class="button" href="instancedraw_photo/index.html">Photo cue, exemplar goal</a>
+        <a class="button" href="categorydraw_text/index.html">Text cue, category goal</a>
+
+        <div class="group-label">Recognition</div>
+        <a class="button" href="recogdraw_category/index.html">Category-level</a>
+        <a class="button" href="recogdraw_instance/index.html">Exemplar-level</a>
+
+        <div class="group-label">Part naming</div>
+        <a class="button" href="partnaming_category/index.html">Category-level</a>
+        <a class="button" href="partnaming_exemplar/index.html">Exemplar-level</a>
+
+        <div class="group-label">Other</div>
+        <a class="button" href="photodraw_norming/index.html">Typicality ratings</a>
+        <a class="button" href="part_annotations/index.html">Semantic part annotations</a>
+
+        <div class="paper-link">
+            <a class="button" href="https://justintheyang.github.io/docs/papers/photodraw_cogsci2021.pdf">View the Paper</a>
+            <a class="button" href="https://github.com/cogtoolslab/photodraw_cogsci2021">See the Repo</a>
+        </div>
+    </div>
+</body>
+</html>
